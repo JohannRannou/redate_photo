@@ -91,18 +91,12 @@ for filename in files:
         print('Except')
         shootTime= metaData['Exif.Image.DateTime']
     except:
-        # print(metaData.get_tags())
         raise
 
-    # for tag in metaData.get_tags():
-    #     print(tag, ':', metaData[tag])
-        
+ 
     newTime = computeNewTime(shootTime, options.oldTime, options.newTime)
 
-    # print('old time', shootTime)
-    # print('new time', newTime)
-    
-    # metaData.set_date_time(newTime)
+
     metaData['Exif.Image.DateTime'] = newTime.isoformat(sep=' ').replace('-',':')
 
     metaData.save_file()

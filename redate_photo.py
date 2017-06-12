@@ -65,9 +65,8 @@ def signe(x) :
 
     
 def computeNewTime(currentTime, oldTime, newTime) :
-    """
-    compute the difference betwenn oldTime and newTime.
-    returns currentTime + newTime - oldTime
+    """Returns currentTime + newTime - oldTime
+    Compute the difference betwenn oldTime and newTime.
     """
     #    datetime.strptime( "2007-03-04T21:08:12", "%Y-%m-%dT%H:%M:%S" )
     ct=datetime.strptime( currentTime, "%Y:%m:%d %H:%M:%S" )
